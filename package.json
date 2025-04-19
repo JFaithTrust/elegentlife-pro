@@ -9,10 +9,8 @@
     "lint": "next lint"
   },
   "overrides": {
-    "@sanity/vision": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    }
+    "react": "$react",
+    "react-dom": "$react-dom"
   },
   "dependencies": {
     "@oslojs/crypto": "^1.0.1",
