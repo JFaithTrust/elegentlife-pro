@@ -31,11 +31,7 @@ const RootLayout = async ({
                     user={user}
                     categorySelector={<HeaderCategorySelector />}
                 />
-                <Script
-                    src='https://cloud.umami.is/script.js'
-                    data-website-id='(YOUR UMAMI WEBSITE ID)'
-                    strategy='beforeInteractive'
-                />
+                <script defer src="https://cloud.umami.is/script.js" data-website-id="7bad4ef7-5477-4ae4-b555-b334413c1242"></script>
 
                 <Suspense>
                     <AnalyticsTracker
