@@ -37,11 +37,11 @@ const ProductItem = ({ product }: ProductItemProps) => {
                     🔥 {100 + Math.abs(product._id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 500)}+ sold in last 24h
                 </div>
                 <Link 
-                    href={`/product/${product._id}`}
-                    className='w-full text-center bg-gradient-to-r from-red-500 to-orange-500 text-white py-2 rounded-full text-sm font-bold hover:brightness-110 transition-all'
-                >
-                    GRAB IT NOW!
-                </Link>
+    href={`/product/${product._id}`}
+    className='w-full text-center bg-white border border-[#ba7d62] text-[#1a1a1a] py-2 rounded-md text-sm font-medium hover:bg-[#c6947d] hover:text-white transition-all'
+>
+    Xarid qilish
+</Link>
                 <div className='text-xs text-red-500 text-center mt-1 animate-pulse'>⚡ Limited time offer!</div>
             </div>
         </div>

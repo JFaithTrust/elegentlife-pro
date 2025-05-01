@@ -13,7 +13,7 @@ const HeaderSearchBar = () => {
                 <input
                     type='text'
                     name='query'
-                    placeholder='Search...'
+                    placeholder='Qidirish...'
                     className='w-32 pl-8 pr-2 py-1 text-sm border border-gray-200 rounded-md focus:ring-1 focus:ring-black focus:border-transparent transition-colors'
                 />
             </div>

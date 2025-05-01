@@ -72,15 +72,16 @@ const Header = ({ user, categorySelector }: HeaderProps) => {
                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
                                 </svg>
                             </button>
-
                             <nav className='hidden md:flex gap-4 lg:gap-6 text-sm font-medium'>
                                 {categorySelector}
-                                <Link href='#'>Sale</Link>
                             </nav>
+
                         </div>
 
+                      
+
                         <Link href='#' className='absolute left-1/2 -translate-x-1/2'>
-                            <span className='text-xl sm:text-2xl font-bold tracking-tight'>DEAL</span>
+                            <span className='text-xl sm:text-2xl font-bold tracking-tight'>ELEGENTLIFE</span>
                         </Link>
 
                         <div className='flex flex-1 justify-end items-center gap-2 sm:gap-4'>
@@ -98,16 +99,16 @@ const Header = ({ user, categorySelector }: HeaderProps) => {
                                             router.refresh();
                                         }}
                                     >
-                                        Sign Out
+                                        Chiqish
                                     </Link>
                                 </div>
                             ) : (
                                 <React.Fragment>
                                     <Link href='/auth/sign-in' className='text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900'>
-                                        Sign In
+                                       Kirish
                                     </Link>
                                     <Link href='/auth/sign-up' className='text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900'>
-                                        Sign Up
+                                      Ro'yxatdan o'tish
                                     </Link>
                                 </React.Fragment>
                             )}
