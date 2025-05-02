@@ -1,37 +1,64 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import React from 'react';
+'use client'
+import React, { useState } from 'react'
 
 const SalesCampaignBanner = () => {
-    const router = useRouter();
+    const [showFirstImageSet, setShowFirstImageSet] = useState(true);
+
+    const toggleImages = () => {
+        setShowFirstImageSet(!showFirstImageSet);
+    };
 
     return (
-        <div className='w-full bg-[#dec1b4] py-3 relative overflow-hidden'>
-            <div className='container mx-auto px-4'>
-                <div className='flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-white'>
-                    <div className='flex items-center gap-2'>
-                        <span className='text-xl sm:text-2xl font-bold animate-bounce'>🔥</span>
-                        <div className='text-sm sm:text-base font-bold'>FLASH SALE ENDS IN:</div>
-                        <div className='bg-white/20 rounded px-2 py-1 font-mono font-bold'>23:59:59</div>
-                    </div>
+        <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+            <div className="w-full py-8 px-2 sm:px-8 md:px-12 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white">
+                {/* Left navigation button */}
+                <button
+                    onClick={toggleImages}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-[#f9ede3] rounded-full w-10 h-10 flex items-center justify-center shadow-lg border border-[#e5d3c6] transition-colors duration-200"
+                    aria-label="Previous images"
+                >
+                    <span className="text-xl font-bold text-[#BA7D62]">&lt;</span>
+                </button>
 
-                    <div className='flex items-center gap-2'>
-                        <span className='text-xl font-bold'>⚡</span>
-                        <span className='font-bold text-yellow-200 animate-pulse'>UP TO 95% OFF!</span>
-                    </div>
-
-                    <button
-                        className='bg-white text-red-600 px-4 py-1 rounded-full font-bold text-sm hover:bg-yellow-100 transition-colors shadow-lg'
-                        onClick={() => {
-                            router.push('/');
-                        }}
-                    >
-                        SHOP NOW!
-                    </button>
+                {/* Text content - left side */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left z-0 mx-2 sm:mx-6 max-w-xl gap-1">
+                    <h1 className="text-xl sm:text-3xl text-gray-700 font-semibold tracking-wide leading-snug">
+                        Haqiqiy go&apos;zallikni
+                        <span className="mx-1 font-semibold" style={{ color: '#BA7D62' }}>Elegentlife</span>
+                        bilan kashf eting
+                    </h1>
+                    <h3 className="text-base sm:text-lg italic text-gray-500 font-normal">
+                        Oddiy kun bo&apos;lsin yoki bayram,
+                        <span className="text-pink-400 font-medium ml-1">siz doim go&apos;zalsiz!</span>
+                    </h3>
                 </div>
+
+                {/* Images - right side */}
+                <div className="flex flex-col gap-4 pr-0 sm:pr-8 md:pr-14">
+                    {showFirstImageSet ? (
+                        <div className="flex gap-4">
+                            <img src="/shahnoza.svg" alt="Image 1" className="h-28 w-auto" />
+                            <img src="/Rectangle.svg" alt="Image 2" className="h-28 w-auto" />
+                        </div>
+                    ) : (
+                        <div className="flex gap-4">
+                            <img src="/Rectangle2.svg" alt="Alternate Image 1" className="h-28 w-auto" />
+                            <img src="/rectangle3.svg" alt="Alternate Image 2" className="h-28 w-auto" />
+                        </div>
+                    )}
+                </div>
+
+                {/* Right navigation button */}
+                <button
+                    onClick={toggleImages}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-[#f9ede3] rounded-full w-10 h-10 flex items-center justify-center shadow-lg border border-[#e5d3c6] transition-colors duration-200"
+                    aria-label="Next images"
+                >
+                    <span className="text-xl font-bold text-[#BA7D62]">&gt;</span>
+                </button>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default SalesCampaignBanner;
+export default SalesCampaignBanner
