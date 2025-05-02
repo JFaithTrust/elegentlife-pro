@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm items-center">
           <a href="#" className="hover:text-[#BA7D62] transition-colors">Biz haqimizda</a>
-          <a href="#" className="hover:text-[#BA7D62] transition-colors">Tez-tez so'raladigan savollar</a>
+          <a href="#" className="hover:text-[#BA7D62] transition-colors">Tez-tez so&apos;raladigan savollar</a>
           <a href="#" className="hover:text-[#BA7D62] transition-colors">Aloqa</a>
           <a href="#" className="hover:text-[#BA7D62] transition-colors">Maxfiylik siyosati</a>
         </div>

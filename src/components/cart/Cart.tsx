@@ -99,7 +99,7 @@ const Cart = () => {
         };
 
         initCart();
-    }, []);
+    }, [setLoaded, syncWithUser]);
 
     const [loadingProceed, setLoadingProceed] = useState<boolean>(false);
     const handleProceedToCheckout = async () => {

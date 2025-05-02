@@ -11,12 +11,12 @@ const faqData = [
     answer: "Elegentlife platformasida mahsulot narxlari mahsulot turiga va yetkazib berish hududiga qarab farq qiladi. Har bir mahsulot sahifasida narxlar ko'rsatilgan.",
   },
   {
-    question: "Elegentlifeda qanday savdo qilsam bo'ladi?",
+    question: "Elegentlifeda qanday savdo qilsam bo'ldi?",
     answer: "Platformamizda ro'yxatdan o'tib, mahsulotlaringizni joylashtirishingiz va xaridorlar bilan to'g'ridan-to'g'ri savdo qilishingiz mumkin.",
   },
   {
     question: "Shartnoma sanasini qayerda ko'rish mumkin?",
-    answer: "Shartnoma sanasini shaxsiy kabinetingizdagi 'Mening shartnomalarim' bo'limidan topishingiz mumkin.",
+    answer: "Shartnoma sanasini shaxsiy kabinetingizdagi Mening shartnomalarim bo'limidan topishingiz mumkin.",
   },
   {
     question: "Elegentlifeni komissioner sifatida kiritish mumkinmi?",
@@ -37,7 +37,7 @@ const FAQs = () => {
 
   return (
     <section className="container mx-auto py-12 px-4">
-      <h2 className="text-4xl font-bold mb-10 text-[#BA7D62]">Tez-tez so'raladigan savollar</h2>
+      <h2 className="text-4xl font-bold mb-10 text-[#BA7D62]">Tez-tez so&apos;raladigan savollar</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
         <div>
           {faqData.slice(0, 3).map((item, idx) => (
