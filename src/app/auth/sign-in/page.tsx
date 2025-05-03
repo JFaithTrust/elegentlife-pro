@@ -21,7 +21,7 @@ const SignInPage = async () => {
         const parsed = SignInSchema.safeParse(Object.fromEntries(formData));
         if(!parsed.success) {
             return {
-                message: "Invalid form data",
+                message: "forma maʼlumotlari yaroqsiz",
             };
         }
 

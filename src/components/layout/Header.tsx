@@ -10,9 +10,9 @@ import { useShallow } from 'zustand/shallow';
 
 const AnnouncementBar = () => {
     return (
-        <div className='w-full bg-black py-2'>
-            <div className='container mx-auto flex items-center justify-center px-8'>
-                <span className='text-center text-sm font-medium tracking-wide text-white'>FREE SHIPPING ON ORDERS OVER $15.00 • FREE RETURNS</span>
+        <div className='w-full' style={{ background: '#c6947d' }}>
+            <div className='container mx-auto flex items-center justify-center px-8 py-2'>
+                <span className='text-center text-sm font-medium tracking-wide text-white'>$15 DAN YUQORI SAVDOGA TEKIN YETKAZIB BERISH • TEKIN QAYTARUV</span>
             </div>
         </div>
     );
@@ -78,9 +78,7 @@ const Header = ({ user, categorySelector }: HeaderProps) => {
 
                         </div>
 
-                      
-
-                        <Link href='#' className='absolute left-1/2 -translate-x-1/2'>
+                        <Link href='/' className='absolute left-1/2 -translate-x-1/2'>
                             <span className='text-xl sm:text-2xl font-bold tracking-tight'>ELEGENTLIFE</span>
                         </Link>
 
@@ -108,7 +106,7 @@ const Header = ({ user, categorySelector }: HeaderProps) => {
                                        Kirish
                                     </Link>
                                     <Link href='/auth/sign-up' className='text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900'>
-                                      Ro&apos;yxatdan o&apos;tish
+                                      Roʻyxatdan oʻtish
                                     </Link>
                                 </React.Fragment>
                             )}

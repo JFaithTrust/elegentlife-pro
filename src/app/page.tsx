@@ -6,6 +6,7 @@ import ProductGrid from "@/components/product/ProductGrid";
 import { getAllProducts } from "@/sanity/lib/client";
 import Footer from "@/components/layout/Footer";
 import FAQs from "@/components/layout/faq";
+import NewProducts from "@/components/layout/NewProducts";
 
 const Home = async () => {
     const { user } = await getCurrentSession();
@@ -22,10 +23,11 @@ const Home = async () => {
             winningIndex={winningIndex}
           />
 
-          <section className='container mx-auto py-8'>
+          <section className="container mx-auto max-w-6xl py-8 px-0">
             <ProductGrid products={products} />
           </section>
           <FAQs />
+          <NewProducts/>
           <Footer />
         </div>
     );

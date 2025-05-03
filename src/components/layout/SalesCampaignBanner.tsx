@@ -9,8 +9,8 @@ const SalesCampaignBanner = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
-            <div className="w-full py-8 px-2 sm:px-8 md:px-12 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white">
+        <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 mt-8">
+            <div className="w-full min-h-[200px] py-12 px-2 sm:px-8 md:px-12 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white shadow-sm">
                 {/* Left navigation button */}
                 <button
                     onClick={toggleImages}
@@ -29,7 +29,7 @@ const SalesCampaignBanner = () => {
                     </h1>
                     <h3 className="text-base sm:text-lg italic text-gray-500 font-normal">
                         Oddiy kun bo&apos;lsin yoki bayram,
-                        <span className="text-pink-400 font-medium ml-1">siz doim go&apos;zalsiz!</span>
+                        <span className="font-medium ml-1">siz doim go&apos;zalsiz!</span>
                     </h3>
                 </div>
 

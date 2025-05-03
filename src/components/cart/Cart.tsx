@@ -38,7 +38,7 @@ const CartItem = ({item}: {item: CartItemType}) => {
                 </h3>
                 <div className='text-sm text-gray-500 mt-1'>
                     {isFreeItem ? (
-                        <span className='text-emerald-600 font-medium'>FREE</span>
+                        <span className='text-emerald-600 font-medium'>Tekin</span>
                     ) : (
                         formatPrice(item.price)
                     )}
@@ -46,7 +46,7 @@ const CartItem = ({item}: {item: CartItemType}) => {
                 <div className='flex items-center gap-3 mt-2'>
                     {isFreeItem ? (
                         <div className='text-sm text-emerald-600 font-medium'>
-                            Prize Item
+                            Yutuqli sovrin
                         </div>
                     ) : (
                         <>
@@ -65,7 +65,7 @@ const CartItem = ({item}: {item: CartItemType}) => {
                                 onClick={() => removeItem(item.id)}
                                 className='text-red-500 text-sm hover:text-red-600'
                             >
-                                Remove
+                                Olib tashlash
                             </button>
                         </>
                     )}
@@ -156,7 +156,7 @@ const Cart = () => {
                     <div className='flex items-center justify-between p-4 border-b bg-gray-50'>
                         <div className='flex items-center gap-2'>
                             <ShoppingCart className='w-5 h-5' />
-                            <h2 className='text-lg font-semibold'>Shopping Cart</h2>
+                            <h2 className='text-lg font-semibold'>Savat</h2>
                             <span className='bg-gray-200 px-2 py-1 rounded-full text-sm font-medium'>
                                 {getTotalItems()}
                             </span>
@@ -177,17 +177,17 @@ const Cart = () => {
                                     <ShoppingCart className='w-8 h-8 text-gray-400' />
                                 </div>
                                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                                    Your cart is empty
+                                    Savatingiz bo&apos;sh
                                 </h3>
                                 <p className='text-gray-500 mb-6'>
-                                    Looks like you have not added any items to your cart yet!
+                                    Savatga hali hech narsa qo&apos;shmagansiz!
                                 </p>
                                 <Link
                                     href="/"
                                     onClick={close}
                                     className='bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-900 transition-colors'
                                 >
-                                    Start Shopping
+                                    Xaridni boshlash
                                 </Link>
                             </div>
                         ) : (
@@ -208,7 +208,7 @@ const Cart = () => {
                                     <div className='flex items-center gap-2 text-blue-800 mb-2'>
                                         <span>🚚</span>
                                         <span className='font-medium'>
-                                            Add {formatPrice(remainingForFreeShipping)} more for FREE shipping
+                                            YETKAZIB BERISH BEPUL bo&apos;lishi uchun yana {formatPrice(remainingForFreeShipping)} lik mahsulot qo&apos;shing
                                         </span>
                                     </div>
                                     <div className='w-full bg-blue-200 rounded-full h-2'>
@@ -223,7 +223,7 @@ const Cart = () => {
                                     <div className='flex items-center gap-2 text-green-800'>
                                         <span>✨</span>
                                         <span className='font-medium'>
-                                            You have unlocked FREE shipping!
+                                            Siz BEPUL yetkazib berishni ochdingiz!
                                         </span>
                                     </div>
                                 </div>
@@ -233,20 +233,20 @@ const Cart = () => {
                             <div className='p-4 space-y-4'>
                                 <div className='space-y-2'>
                                     <div className='flex items-center justify-between text-sm'>
-                                        <span className='text-gray-500'>Subtotal</span>
+                                        <span className='text-gray-500'>Jami</span>
                                         <span className='font-medium'>{formatPrice(totalPrice)}</span>
                                     </div>
                                     <div className='flex items-center justify-between text-sm'>
-                                        <span className='text-gray-500'>Shipping</span>
+                                        <span className='text-gray-500'>Yetkazib berish</span>
                                         <span className='font-medium'>
-                                            {remainingForFreeShipping > 0 ? 'Calculated at checkout' : 'FREE'}
+                                            {remainingForFreeShipping > 0 ? 'Chekda hisoblanadi' : 'BEPUL'}
                                         </span>
                                     </div>
                                 </div>
 
                                 <div className='border-t pt-4'>
                                     <div className='flex items-center justify-between mb-4'>
-                                        <span className='font-medium text-lg'>Total</span>
+                                        <span className='font-medium text-lg'>Umumiy</span>
                                         <span className='font-bold text-lg'>{formatPrice(totalPrice)}</span>
                                     </div>
 
@@ -257,24 +257,24 @@ const Cart = () => {
                                     >
                                         {loadingProceed ? (
                                             <div className='flex items-center gap-1'>
-                                                Navigating to checkout...
+                                                Chekautga o‘tilmoqda...
                                                 <Loader2 className='w-4 h-4 animate-spin' />
                                             </div>
-                                        ) : 'Proceed to Checkout'}
+                                        ) : 'Rasmiylashtirishga o‘tish'}
                                     </button>
 
                                     <div className='mt-4 space-y-2'>
                                         <div className='flex items-center gap-2 text-sm text-gray-500'>
                                             <span>🔒</span>
-                                            <span>Secure checkout</span>
+                                            <span>Xavfsiz to‘lov</span>
                                         </div>
                                         <div className='flex items-center gap-2 text-sm text-gray-500'>
                                             <span>🔄</span>
-                                            <span>30-day returns</span>
+                                            <span>30 kunlik qaytarish</span>
                                         </div>
                                         <div className='flex items-center gap-2 text-sm text-gray-500'>
                                             <span>💳</span>
-                                            <span>All major payment methods accepted</span>
+                                            <span>Barcha asosiy to‘lov usullari mavjud</span>
                                         </div>
                                     </div>
                                 </div>

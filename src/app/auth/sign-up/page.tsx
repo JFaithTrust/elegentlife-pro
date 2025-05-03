@@ -21,7 +21,7 @@ const SignUpPage = async () => {
         const parsed = SignUpSchema.safeParse(Object.fromEntries(formData));
         if(!parsed.success) {
             return {
-                message: "Invalid form data",
+                message: "Forma maʼlumotlari yaroqsiz",
             };
         }
 

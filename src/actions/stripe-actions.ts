@@ -51,7 +51,7 @@ export const createCheckoutSession = async (cartId: string) => {
                         currency: 'usd',
                         amount: totalPrice >= 15 ? 0 : 5 * 100 // $5.00 USD
                     },
-                    display_name: totalPrice >= 15 ? 'Free Shipping' : 'Shipping',
+                    display_name: totalPrice >= 15 ? 'Bepul yetkazib berish' : 'Yetkazib berish',
                     delivery_estimate: {
                         minimum: {
                             unit: 'business_day',
@@ -64,7 +64,8 @@ export const createCheckoutSession = async (cartId: string) => {
                     }
                 }
             }
-        ]
+        ],
+        locale: 'auto', // Stripe checkout interfeysini avtomatik tilga moslash
     });
 
     if(!session.url) {

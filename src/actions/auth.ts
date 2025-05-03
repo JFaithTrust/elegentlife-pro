@@ -143,7 +143,7 @@ export const registerUser = async (email: string, password: string) => {
     } catch(e) {
         return {
             user: null,
-            error: "Failed to register user"
+            error: "Foydalanuvchini ro‘yxatdan o‘tkazib bo‘lmadi"
         }
     }
 }
@@ -158,7 +158,7 @@ export const loginUser = async (email: string, password: string) => {
     if(!user) {
         return {
             user: null,
-            error: "User not found",
+            error: "Foydalanuvchi topilmadi",
         }
     }
 
@@ -166,7 +166,7 @@ export const loginUser = async (email: string, password: string) => {
     if(!passwordValid) {
         return {
             user: null,
-            error: "Invalid password",
+            error: "Yaroqsiz parol",
         }
     }
 

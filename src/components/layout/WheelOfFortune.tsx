@@ -140,7 +140,7 @@ const WinningItem = ({ product, onClose }: {product: Product, onClose: () => voi
                             [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)]
                         `}
                     >
-                        🎉 Congratulations 🎉
+                        🎉 Tabriklaymiz 🎉
                     </h3>
 
                     <div className='flex flex-col items-center gap-6'>
@@ -158,7 +158,7 @@ const WinningItem = ({ product, onClose }: {product: Product, onClose: () => voi
                                 <div className='relative bg-gradient-to-br from-white to-gray-50 p-4 rounded-xl shadow-2xl'>
                                     {/* Price tag */}
                                     <div className='absolute -top-3 -right-3 bg-red-600 text-white px-4 py-1 rounded-full font-black text-lg shadow-lg z-10'>
-                                        FREE!
+                                       Tekin!
                                     </div>
 
                                     {/* Image */}
@@ -174,7 +174,7 @@ const WinningItem = ({ product, onClose }: {product: Product, onClose: () => voi
                                         <div className='absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-transparent' />
 
                                         <div className='absolute bottom-2 left-2 bg-yellow-500/90 text-white text-xs font-bold px-2 py-1 rounded-full backdrop-blur-sm'>
-                                            Limited Time Only!
+                                            Faqat cheklangan vaqtda!
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@ const WinningItem = ({ product, onClose }: {product: Product, onClose: () => voi
 
                         <div className='text-center space-y-2'>
                             <h4 className='text-xl font-bold text-gray-800'>
-                                You won:
+                                Siz yutdingiz:
                             </h4>
                             <p className='text-lg text-emerald-600 font-semibold'>
                                 {product.title}
@@ -212,12 +212,12 @@ const WinningItem = ({ product, onClose }: {product: Product, onClose: () => voi
                     {isAdding ? (
                         <>
                             <Loader2 className='w-5 h-5 animate-spin' />
-                            Adding to Cart...
+                            Savatga qo‘shilmoqda...
                         </>
                     ) : (
                         <>
                             <ShoppingCart className='w-5 h-5' />
-                            Claim Your Prize!
+                            Sovrinni olish!
                         </>
                     )}
                 </button>
@@ -301,10 +301,10 @@ const WheelOfFortune = ({ products, winningIndex }: WheelOfFortuneProps) => {
                     <div className='p-6 text-center relative overflow-hidden'>
                         <div className='absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 animate-pulse' />
                         <h2 className='text-2xl font-bold mb-2 animate-bounce'>
-                            Spin & Win! 🎁
+                            Aylantiring va yutib oling! 🎁
                         </h2>
                         <p className='text-muted-foreground mb-4 relative animate-pulse'>
-                            Try your luck! Spin the wheel for a chance to win amazing prizes!
+                            Omadingizni sinab ko‘ring! G‘ildirakni aylantiring va ajoyib sovrinlarni yutib oling!
                         </p>
                         <div className='absolute -left-10 top-1/2 h-8 w-40 bg-white/20 rotate-45 animate-[shine_2s_infinite]' />
                     </div>
@@ -400,14 +400,14 @@ const WheelOfFortune = ({ products, winningIndex }: WheelOfFortuneProps) => {
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
-                                Spinning...
+                                Aylantirilmoqda...
                             </span>
                         ) : hasSpun ? (
-                            "🎉 Congratulations! 🎉"
+                            "🎉 Tabriklaymiz! 🎉"
                         ) : (
                             <>
                                 <span className='animate-[pulse_1s_ease-in-out_infinite]'>🎁</span>
-                                {" SPIN NOW! "}
+                                {" HOZIR AYLANG! "}
                                 <span className='animate-[pulse_1s_ease-in-out_infinite]'>🎁</span>
                             </>
                         )}

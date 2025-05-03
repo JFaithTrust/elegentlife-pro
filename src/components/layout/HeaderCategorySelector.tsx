@@ -9,7 +9,7 @@ const HeaderCategorySelector = async () => {
   return (
     <div className='relative inline-block'>
         <button className='peer group text-gray-700 hover:text-gray-900 text-sm font-medium flex items-center gap-1'>
-            Categories
+            Kategoriyalar
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="16" 
