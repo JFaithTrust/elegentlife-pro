@@ -41,43 +41,6 @@ const ProductPage = async ({ params }: { params: Promise<{ id: string }> } ) => 
             </div>
         </div>
 
-        {/* Product Sale Banner */}
-        <div className='bg-gradient-to-r from-red-500/10 to-red-600/10 py-6 px-4'>
-            <div className='container mx-auto'>
-                <h1 className='text-2xl md:text-4xl font-bold text-center text-red-600 mb-3'>
-                🔥 FLASH SALE - 80% OFF 🔥
-                </h1>
-                <div className='flex flex-col items-center gap-2'>
-                    <p className='text-center text-red-500 text-sm md:text-base font-semibold animate-pulse'>
-                        ⚡️ Only {Math.floor(Math.random() * 10) + 1} items left at this price!
-                    </p>
-                    <div className='bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm'>
-                        ⏰ Offer ends soon!
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* Guarantee Items */}
-        <div className='bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 py-4'>
-            <div className='container mx-auto'>
-                <div className='flex flex-wrap items-center justify-center gap-6 text-sm'>
-                    <div className='flex items-center gap-2'>
-                        <span className='text-yellow-600 text-xl'>🚚</span>
-                        <span className='font-medium'>Free Express Shipping</span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                        <span className='text-yellow-600 text-xl'>✨</span>
-                        <span className='font-medium'>Satisfaction Guaranteed</span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                        <span className='text-yellow-600 text-xl'>🔒</span>
-                        <span className='font-medium'>Secure Checkout</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         {/* Product Details */}
         <div className='container mx-auto py-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -123,51 +86,24 @@ const ProductPage = async ({ params }: { params: Promise<{ id: string }> } ) => 
                                         -80%
                                     </span>
                                     <span className='text-red-600 font-bold text-sm'>
-                                        MEGA SAVINGS
+                                        Katta savdo
                                     </span>
                                 </div>
                             </div>
                         </div>
-
                         <div className='flex items-center gap-2 bg-red-50 p-2 rounded-lg'>
                             <span className='text-red-600 font-bold'>💰</span>
                             <span className='text-red-600 font-medium text-sm'>
-                                You save {formatPrice(originalPrice - product.price)}!
+                                Siz saqlab qoldingiz: {formatPrice(originalPrice - product.price)}!
                             </span>
                         </div>
-
                         <div className='flex items-center gap-2 text-xs text-gray-600'>
                             <span className='inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse'></span>
-                            <span>{Math.floor(Math.random() * 50) + 20} people bought in the last hour</span>
+                            <span>{Math.floor(Math.random() * 50) + 20} ta odam so&apos;ngi bir sotib oldi</span>
                         </div>
                     </div>
 
-                    <div className='bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 p-4 rounded-xl mt-4'>
-                        <div className='flex items-center gap-2 text-yellow-800'>
-                            <span className='text-xl'>⚡️</span>
-                            <span className='font-bold'>Limited Time Offer!</span>
-                        </div>
-                        <div className='text-sm text-yellow-700 mt-1 font-medium'>
-                            Order now before price changes!
-                        </div>
-                    </div>
-
-                    <AddToCartButton product={product} />
-
-                    <div className='flex flex-col gap-3 mt-6 text-sm bg-white p-4 rounded-xl shadow-sm border border-gray-100'>
-                        <div className='flex items-center gap-3 text-gray-700'>
-                            <span className='bg-green-100 p-2 rounded-full'>✅</span>
-                            <span className='font-medium'>In stock - Ships within 24 hours</span>
-                        </div>
-                        <div className='flex items-center gap-3 text-gray-700'>
-                            <span className='bg-green-100 p-2 rounded-full'>🔄</span>
-                            <span className='font-medium'>30-day money-back guarantee</span>
-                        </div>
-                        <div className='flex items-center gap-3 text-gray-700'>
-                            <span className='bg-green-100 p-2 rounded-full'>🛡️</span>
-                            <span className='font-medium'>Secure payment processing</span>
-                        </div>
-                    </div>
+                    <AddToCartButton product={product} buttonClassName="w-full text-center bg-white border border-[#ba7d62] text-[#1a1a1a] py-4 rounded-full text-lg font-bold hover:bg-[#c6947d] hover:text-white transition-all block shadow-none mt-4" />
                 </div>
             </div>
         </div>

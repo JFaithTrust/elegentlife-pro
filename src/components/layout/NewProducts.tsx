@@ -14,7 +14,7 @@ export default function NewProducts() {
             Xarid qilish
           </button> */}
           <Link 
-  href="/category/atirlarelegentlife"
+  href="/category/atirlar"
   className="px-10 py-4 rounded-md text-center bg-white border border-[#ba7d62] text-[#1a1a1a] py-2 rounded-md text-sm font-medium hover:bg-[#c6947d] hover:text-white transition-all block"
 >
   Xarid qilish

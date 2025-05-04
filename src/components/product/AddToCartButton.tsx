@@ -8,9 +8,10 @@ import React, { useState } from 'react'
 import { useShallow } from 'zustand/shallow'
 
 type AddToCartButtonProps = {
-    product: Product
+    product: Product;
+    buttonClassName?: string;
 }
-const AddToCartButton = ({ product }: AddToCartButtonProps) => {
+const AddToCartButton = ({ product, buttonClassName }: AddToCartButtonProps) => {
     const { cartId, addItem, open } = useCartStore(
         useShallow((state) => ({
             cartId: state.cartId,
@@ -65,26 +66,21 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
         onClick={handleAddToCart}
         disabled={isLoading}
         className={`
-            w-full mt-6 bg-gradient-to-r from-red-500 to-red-600
-            text-white py-4 rounded-full font-bold text-xl
-            hover:from-red-600 hover:to-red-700
-            transition-all transform
-            hover:scale-[1.02] active:scale-[1.02]
-            shadow-xl flex items-center justify-center gap-3
+            w-full mt-6 bg-white border border-[#ba7d62] text-[#1a1a1a] py-5 rounded-full text-xl font-bold flex items-center justify-center gap-3
+            hover:bg-[#c6947d] hover:text-white transition-all shadow-none
             disabled:opacity-80 disabled:cursor-not-allowed
-            disabled:hover:scale-100 disabled:active:scale-100
-            disabled:hover:from-red-500 disabled:hover:to-red-600
+            ${buttonClassName ?? ''}
         `}
     >
         {isLoading ? (
             <>
-                <Loader2 className='w-6 h-6 animate-spin' />
-                <span>Savatga qoshilmoqda...</span>
+                <Loader2 className='w-7 h-7 animate-spin' />
+                <span className='text-lg'>Savatga qo‘shilmoqda...</span>
             </>
         ) : (
             <>
                 <svg 
-                    className="w-6 h-6" 
+                    className="w-7 h-7" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -96,7 +92,7 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
                         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                 </svg>
-                Savatga qoshish - {formatPrice(product.price)}
+                <span className='text-xl font-bold'>Savatga qo‘shish - {formatPrice(product.price)}</span>
             </>
         )}
     </button>
