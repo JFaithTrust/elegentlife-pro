@@ -298,15 +298,11 @@ const WheelOfFortune = ({ products, winningIndex }: WheelOfFortuneProps) => {
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogContent className='sm:max-w-[800px] p-0'>
                 <DialogTitle>
-                    <div className='p-6 text-center relative overflow-hidden'>
-                        <div className='absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 animate-pulse' />
-                        <h2 className='text-2xl font-bold mb-2 animate-bounce'>
-                            Aylantiring va yutib oling! 🎁
-                        </h2>
-                        <p className='text-muted-foreground mb-4 relative animate-pulse'>
-                            Omadingizni sinab ko‘ring! G‘ildirakni aylantiring va ajoyib sovrinlarni yutib oling!
-                        </p>
-                        <div className='absolute -left-10 top-1/2 h-8 w-40 bg-white/20 rotate-45 animate-[shine_2s_infinite]' />
+                    <div className='bg-[#f7f1ec] p-4'>
+                        <div className='container mx-auto'>
+                            <h1 className='text-2xl md:text-3xl font-bold text-center mb-2' style={{ color: '#ba7d62' }}>Aylantiring va yutib oling! 🎁</h1>
+                            <p className='text-center text-gray-600 text-xs mt-2'>Omadingizni sinab ko&apos;ring! G&apos;ildirakni aylantiring va ajoyib sovrinlarni yutib oling!</p>
+                        </div>
                     </div>
                 </DialogTitle>
 
@@ -382,33 +378,25 @@ const WheelOfFortune = ({ products, winningIndex }: WheelOfFortuneProps) => {
                         onClick={handleSpin}
                         disabled={isSpinning || hasSpun}
                         className={`
-                            relative px-8 py-4 rounded-full font-bold text-white text-lg transition-all
-                            bg-gradient-to-r from-red-500 via-yellow-500 to-red-500
-                            bg-[length:200%_100%] animate-[gradient-x_2s_linear_infinite]
-                            border-4 border-yellow-300
-                            shadow-[0_0_20px_rgba(234,179,8,0.5)]
-                            hover:shadow-[0_0_30px_rgba(234,179,8,0.8)]
-                            hover:scale-105
+                            mt-6 w-full py-4 px-8 rounded-full font-bold
+                            transition-all duration-300 transform
+                            flex items-center justify-center gap-2
+                            hover:bg-[#c6947d] hover:text-white
+                            bg-white border border-[#ba7d62] text-[#1a1a1a]
                             disabled:opacity-50 disabled:cursor-not-allowed
-                            ${showWinningItem ? 'opacity-0 scale-0 -translate-y-full' : ''}
-                            before:absolute before:inset-0 before:bg-white/20 before:animate-[pulse_1s_ease-in-out_infinite]
                         `}
                     >
                         {isSpinning ? (
                             <span className='inline-flex items-center gap-2'>
-                                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg className="animate-spin h-5 w-5 text-[#ba7d62]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                                 Aylantirilmoqda...
                             </span>
-                        ) : hasSpun ? (
-                            "🎉 Tabriklaymiz! 🎉"
                         ) : (
                             <>
-                                <span className='animate-[pulse_1s_ease-in-out_infinite]'>🎁</span>
-                                {" HOZIR AYLANG! "}
-                                <span className='animate-[pulse_1s_ease-in-out_infinite]'>🎁</span>
+                                🎁 HOZIR AYLANG! 🎁
                             </>
                         )}
                     </button>

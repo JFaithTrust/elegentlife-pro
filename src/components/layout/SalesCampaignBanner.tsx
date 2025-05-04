@@ -9,8 +9,8 @@ const SalesCampaignBanner = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 mt-8">
-            <div className="w-full min-h-[200px] py-12 px-2 sm:px-8 md:px-12 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white shadow-sm">
+        <div className="container mx-auto px-8 mt-8">
+            <div className="w-full min-h-[200px] py-12 px-8 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white shadow-sm">
                 {/* Left navigation button */}
                 <button
                     onClick={toggleImages}
@@ -34,7 +34,7 @@ const SalesCampaignBanner = () => {
                 </div>
 
                 {/* Images - right side */}
-                <div className="flex flex-col gap-4 pr-0 sm:pr-8 md:pr-14">
+                <div className="flex flex-col gap-4 pr-0">
                     {showFirstImageSet ? (
                         <div className="flex gap-4">
                             <img src="/shahnoza.svg" alt="Image 1" className="h-28 w-auto" />

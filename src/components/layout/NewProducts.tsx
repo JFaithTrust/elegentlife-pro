@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NewProducts() {
   return (
-    <section className="container mx-auto max-w-6xl py-12 px-0 rounded-2xl">
+    <section className="container mx-auto px-8 max-w-7xl py-12 rounded-2xl">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 my-16">
         {/* Chap tomon: matn */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">

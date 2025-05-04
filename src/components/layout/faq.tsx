@@ -36,7 +36,7 @@ const FAQs = () => {
   };
 
   return (
-    <section className="container mx-auto max-w-6xl py-12 px-0 rounded-2xl">
+    <section className="container mx-auto px-8 max-w-7xl py-12 rounded-2xl">
       <h2 className="text-4xl font-bold mb-10 text-[#BA7D62]">Tez-tez so&apos;raladigan savollar</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
         <div>

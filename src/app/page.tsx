@@ -7,6 +7,7 @@ import { getAllProducts } from "@/sanity/lib/client";
 import Footer from "@/components/layout/Footer";
 import FAQs from "@/components/layout/faq";
 import NewProducts from "@/components/layout/NewProducts";
+import ClientCategoryProducts from "./category/[slug]/ClientCategoryProducts";
 
 const Home = async () => {
     const { user } = await getCurrentSession();
@@ -24,7 +25,7 @@ const Home = async () => {
           />
 
           <section className="container mx-auto max-w-6xl py-8 px-0">
-            <ProductGrid products={products} />
+            <ClientCategoryProducts products={products} />
           </section>
           <FAQs />
           <NewProducts/>

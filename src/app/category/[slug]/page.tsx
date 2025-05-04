@@ -1,12 +1,13 @@
 import SalesCampaignBanner from '@/components/layout/SalesCampaignBanner';
-import ProductGrid from '@/components/product/ProductGrid';
 import Footer from '@/components/layout/Footer';
 import { getCategoryBySlug, getProductsByCategorySlug } from '@/sanity/lib/client';
 import React from 'react';
+import ClientCategoryProducts from './ClientCategoryProducts';
 
 type CategoryPageProps = {
     params: Promise<{ slug: string }>;
 };
+
 const CategoryPage = async ({ params }: CategoryPageProps) => {
     const { slug } = await params;
 
@@ -23,9 +24,7 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
                 </div>
             </div>
 
-            <section className='container mx-auto py-8'>
-                <ProductGrid products={products} />
-            </section>
+            <ClientCategoryProducts products={products} />
             <Footer />
         </div>
     );
