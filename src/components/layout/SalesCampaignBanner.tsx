@@ -9,7 +9,7 @@ const SalesCampaignBanner = () => {
     };
 
     return (
-        <div className="container mx-auto px-8 mt-8">
+        <div className="container mx-auto px-8 pt-8">
             <div className="w-full min-h-[200px] py-12 px-8 mb-8 flex flex-col md:flex-row items-center justify-between relative rounded-3xl border border-[#e5d3c6] bg-white shadow-sm">
                 {/* Left navigation button */}
                 <button

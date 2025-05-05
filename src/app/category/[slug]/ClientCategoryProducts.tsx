@@ -39,7 +39,7 @@ export default function ClientCategoryProducts({ products }: { products: any[] }
   const [sort, setSort] = useState<string>('');
 
   const sortedProducts = useMemo(() => {
-    let arr = [...products];
+    const arr = [...products];
     if (sort === 'price-asc') arr.sort((a, b) => a.price - b.price);
     if (sort === 'price-desc') arr.sort((a, b) => b.price - a.price);
     if (sort === 'alpha-asc') arr.sort((a, b) => a.title.localeCompare(b.title));

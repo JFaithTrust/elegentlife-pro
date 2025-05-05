@@ -20,8 +20,6 @@ const ProductPage = async ({ params }: { params: Promise<{ id: string }> } ) => 
 
   return (
     <div className='bg-gray-50'>
-        <SalesCampaignBanner />
-
         {/* Breadcrumb Navigation */}
         <div className='bg-white border-b border-gray-200'>
             <div className='container mx-auto py-3 px-4'>
