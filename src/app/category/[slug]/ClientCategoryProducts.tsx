@@ -2,30 +2,27 @@
 import { useState, useMemo } from "react";
 import ProductGrid from '@/components/product/ProductGrid';
 
-const FilterPanel = ({ onSortChange }: { onSortChange: (sort: string) => void }) => (
+const FilterPanel = ({ onSortChange, activeSort }: { onSortChange: (sort: string) => void, activeSort: string }) => (
   <div className="container mx-auto px-8 max-w-7xl mb-6">
     <div className="flex flex-wrap items-center gap-4 bg-white rounded-xl p-4">
       <span className="font-medium text-[#ba7d62]">Saralash:</span>
-      <button
-        className="px-4 py-2 rounded-md border border-[#ba7d62] text-[#ba7d62] bg-white hover:bg-[#ba7d62] hover:text-white transition font-medium"
-        onClick={() => onSortChange('price-asc')}
-      >Narx: arzon → qimmat</button>
-      <button
-        className="px-4 py-2 rounded-md border border-[#ba7d62] text-[#ba7d62] bg-white hover:bg-[#ba7d62] hover:text-white transition font-medium"
-        onClick={() => onSortChange('price-desc')}
-      >Narx: qimmat → arzon</button>
-      <button
-        className="px-4 py-2 rounded-md border border-[#ba7d62] text-[#ba7d62] bg-white hover:bg-[#ba7d62] hover:text-white transition font-medium"
-        onClick={() => onSortChange('alpha-asc')}
-      >Alifbo: A → Z</button>
-      <button
-        className="px-4 py-2 rounded-md border border-[#ba7d62] text-[#ba7d62] bg-white hover:bg-[#ba7d62] hover:text-white transition font-medium"
-        onClick={() => onSortChange('alpha-desc')}
-      >Alifbo: Z → A</button>
-      <button
-        className="px-4 py-2 rounded-md border border-[#ba7d62] text-[#ba7d62] bg-white hover:bg-[#ba7d62] hover:text-white transition font-medium"
-        onClick={() => onSortChange('sold-desc')}
-      >Eng ko‘p sotilgan</button>
+      {[
+        { key: 'price-asc', label: 'Narx: arzon → qimmat' },
+        { key: 'price-desc', label: 'Narx: qimmat → arzon' },
+        { key: 'alpha-asc', label: 'Alifbo: A → Z' },
+        { key: 'alpha-desc', label: 'Alifbo: Z → A' },
+        { key: 'sold-desc', label: 'Eng ko‘p sotilgan' },
+      ].map(({ key, label }) => (
+        <button
+          key={key}
+          className={`px-4 py-2 rounded-md border border-[#ba7d62] font-medium transition
+            ${activeSort === key ? 'bg-[#ba7d62] border-[#ba7d62] text-white' : 'bg-white text-[#ba7d62] hover:bg-[#ba7d62] hover:text-white'}
+          `}
+          onClick={() => onSortChange(activeSort === key ? '' : key)}
+        >
+          {label}
+        </button>
+      ))}
     </div>
   </div>
 );
@@ -39,7 +36,7 @@ export default function ClientCategoryProducts({ products }: { products: any[] }
   const [sort, setSort] = useState<string>('');
 
   const sortedProducts = useMemo(() => {
-    const arr = [...products];
+    let arr = [...products];
     if (sort === 'price-asc') arr.sort((a, b) => a.price - b.price);
     if (sort === 'price-desc') arr.sort((a, b) => b.price - a.price);
     if (sort === 'alpha-asc') arr.sort((a, b) => a.title.localeCompare(b.title));
@@ -50,7 +47,7 @@ export default function ClientCategoryProducts({ products }: { products: any[] }
 
   return (
     <>
-      <FilterPanel onSortChange={setSort} />
+      <FilterPanel onSortChange={setSort} activeSort={sort} />
       <section className="container mx-auto py-8 px-8 max-w-7xl">
         <ProductGrid products={sortedProducts} />
       </section>
